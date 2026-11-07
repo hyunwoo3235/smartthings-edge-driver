@@ -1,0 +1,6 @@
+name: 'Mi Smart Computer Monitor Light Bar 1S'
+packageKey: 'miot-yeelink-light-lamp22'
+description: 'Local MIoT LAN driver for yeelink.light.lamp22'
+permissions:
+  lan: {}
+  discovery: {}

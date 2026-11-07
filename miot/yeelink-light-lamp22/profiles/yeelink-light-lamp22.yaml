@@ -1,0 +1,47 @@
+name: yeelink-light-lamp22
+components:
+  - id: main
+    capabilities:
+      - id: switch
+        version: 1
+      - id: switchLevel
+        version: 1
+      - id: colorTemperature
+        version: 1
+      - id: refresh
+        version: 1
+    categories:
+      - name: Light
+preferences:
+  - name: ipAddress
+    title: IP Address
+    description: 'Light Bar 1S의 로컬 IPv4 주소 (공유기에서 DHCP 예약 권장)'
+    required: true
+    preferenceType: string
+    definition:
+      stringType: text
+      default: ''
+  - name: token
+    title: Token
+    description: 'Mi Home 기기 토큰 (32자리 16진수)'
+    required: true
+    preferenceType: string
+    definition:
+      stringType: text
+      default: ''
+  - name: pollingInterval
+    title: 갱신 주기 (초)
+    description: '리모컨 또는 Mi Home에서 바뀐 상태를 확인하는 간격'
+    required: false
+    preferenceType: integer
+    definition:
+      minimum: 10
+      maximum: 300
+      default: 60
+  - name: createDev
+    title: 추가 기기 만들기
+    description: '끄기에서 켜기로 변경하면 같은 모델의 설정용 기기를 하나 더 만듭니다.'
+    required: false
+    preferenceType: boolean
+    definition:
+      default: false
